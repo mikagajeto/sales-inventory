@@ -1,0 +1,30 @@
+# depslib dependency file v1.0
+1608294310 source:c:\users\benja\onedrive\desktop\mark\cs50_lib\cs50.c
+	<ctype.h>
+	<errno.h>
+	<float.h>
+	<limits.h>
+	<math.h>
+	<stdarg.h>
+	<stdint.h>
+	<stdbool.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"cs50.h"
+
+1608294414 c:\users\benja\onedrive\desktop\mark\cs50_lib\cs50.h
+	<float.h>
+	<limits.h>
+	<stdarg.h>
+	<stdbool.h>
+	<stddef.h>
+
+1610017649 source:c:\users\benja\onedrive\desktop\mark\computerprogramming1_projects\01sales_inventory_v2\sales-inventory\main.c
+	<stdio.h>
+	<stdlib.h>
+	<cs50.h>
+	<ctype.h>
+	<string.h>
+	<time.h>
+

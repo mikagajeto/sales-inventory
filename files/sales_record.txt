@@ -1,0 +1,7 @@
+TYPES OF SERVICE	 QUANTITY	AMOUNT
+
+Document Printing	 0		0.00
+Image Printing		 0		0.00
+Computer Rental	 	 0		0.00
+Scanning		 2		20.00
+Typing			 1		15.00

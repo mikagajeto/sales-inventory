@@ -1,0 +1,70 @@
+SALES			 QUANTITY	SALES AMOUNT		DATE: Mon Jan 04 17:02:36 2021
+
+Document Printing	 1		2.00
+
+
+SALES			 QUANTITY	SALES AMOUNT		DATE: Thu Jan 01 08:00:24 1970
+
+Document Printing	 1		2.00
+
+
+SALES			 QUANTITY	SALES AMOUNT		DATE: Thu Jan 01 08:00:00 1970
+
+Document Printing	 1		2.00
+
+
+SALES			 QUANTITY	SALES AMOUNT		DATE: (null)
+Document Printing	 1		2.00
+
+
+SALES			 QUANTITY	SALES AMOUNT		DATE: Fri Jan 02 08:00:00 1970
+
+Document Printing	 1		2.00
+
+
+SALES			 QUANTITY	SALES AMOUNT		DATE: Mon Jan 04 18:03:08 2021
+
+Document Printing	 1		2.00
+Image Printing		 1		10.00
+Computer Rental	 	 1		15.00
+Scanning		 1		10.00
+Typing			 1		15.00
+
+
+SALES			 QUANTITY	SALES AMOUNT		DATE: Mon Jan 04 18:28:48 2021
+
+Document Printing	 1		2.00
+
+
+SALES			 QUANTITY	SALES AMOUNT		DATE: Mon Jan 04 18:29:37 2021
+
+Document Printing	 5		10.00
+Document Printing	 1		2.00
+
+
+SALES			 QUANTITY	SALES AMOUNT		DATE: Mon Jan 04 18:41:44 2021
+
+Document Printing	 1		2.00
+Image Printing		 1		10.00
+Computer Rental	 	 1		15.00
+Computer Rental	 	 1		15.00
+Scanning		 1		10.00
+Typing			 1		15.00
+
+
+SALES			 QUANTITY	SALES AMOUNT		DATE: Thu Jan 07 17:15:02 2021
+
+Document Printing	 1		2.00
+
+
+SALES			 QUANTITY	SALES AMOUNT		DATE: Thu Jan 07 17:19:43 2021
+
+Document Printing	 1		2.00
+
+
+SALES			 QUANTITY	SALES AMOUNT		DATE: Thu Jan 07 19:34:43 2021
+
+Typing			 1		15.00
+Scanning		 2		20.00
+
+
