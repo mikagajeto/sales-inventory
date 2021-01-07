@@ -5,15 +5,24 @@
 #include <string.h>
 #include <time.h>
 
+
+
+
 FILE *fp1, *fp2, *fp3;
+char cur_line[255], *token;
+time_t cur_time;
+
 
 void main_menu();
 
 void file_management();
 
-void service_list(float array[]);
+void file_print(FILE *fp, string with_num);
+
+void get_price(float array[]);
 
 string yes_no(string question);
+
 int finals();
 
 int main()
@@ -34,6 +43,14 @@ int main()
             printf("\n");
             finals();
         }
+        else if(response == 3)
+        {
+
+        }
+        else if (response == 4)
+        {
+
+        }
         else if (response == 5)
         {
             string confirm = yes_no("Are you sure you want to quit?");
@@ -41,6 +58,9 @@ int main()
                 running = false;
         }
     }
+    printf("\nABC COMPUTER SHOP DAILY SALES REPORT\n\n");
+    printf("Prepared by: CABALONA MARK REYES AND SOPHIA DALUMPINES\n\n");
+    printf("Date prepared: %s\n", ctime(&cur_time));
 
 
     return 0;
@@ -59,7 +79,8 @@ void main_menu()
 void file_management()
 {
     string service_name, confirm;
-    float price;
+    int service_num;
+    float price, new_price[255];
 
     fp1 = fopen("C:\\Users\\Benja\\OneDrive\\Desktop\\Mark\\ComputerProgramming1_projects\\01SALES_INVENTORY_v2\\sales-inventory\\files\\product_inventory.txt","a");
 
@@ -78,12 +99,71 @@ void file_management()
         if (strcmp(confirm, "y") == 0)
         {
             fprintf(fp1, "\n%s\t%.2f", service_name, price);//mali 'to
-            printf("You successfully added %s to the service list!\n\n", service_name);
+            printf("You've successfully added %s to the service list!\n\n", service_name);
+        }
+    }
+    else if (response == 2)
+    {
+        file_print(fp1, "with num");
+        service_num = get_int("What service you want to edit? ");
+        confirm = yes_no("Are you sure you want to edit service's price(Y/N)? ");
+        if (strcmp(confirm, "y") == 0)
+        {
+            get_price(new_price);
+           // use dictionary here
+
+            printf("You've successfully edited the price!\n\n");
         }
     }
 
     fclose(fp1);
 }//end of file_management()
+
+void file_print(FILE *fp, string with_num)
+{
+    int i = 0;
+    if (strcmp(with_num, "with num") == 0)
+    {
+        while (!feof(fp))
+        {
+            fgets(cur_line, 255, fp);
+            if (i != 0)
+                printf("%d %s", i, cur_line);
+            i++;
+        }
+    }
+    else
+    {
+        while (!feof(fp))
+        {
+            fgets(cur_line, 255, fp);
+            printf("%s", cur_line);
+        }
+    }
+}
+
+void get_price(float array[])
+{
+    int i = 0;
+    fp1 = fopen("C:\\Users\\Benja\\OneDrive\\Desktop\\Mark\\ComputerProgramming1_projects\\01SALES_INVENTORY_v2\\sales-inventory\\files\\product_inventory.txt","r");
+    while (!feof(fp1))
+    {
+        fgets(cur_line, 255, fp1);
+
+        token = strtok(cur_line, "\n\t ");
+        while (token != NULL)
+        {
+            if (atof(token) != 0 )//atof("2.10") = 2.10
+            {
+                array[i] = atof(token);
+                i++;
+            }
+            token = strtok(NULL, "\n\t ");
+        }
+    }
+    fclose(fp1);
+}
+
 
 int finals()
 {
@@ -97,13 +177,15 @@ int finals()
     int total_count[255]={0,0,0,0,0};
     int count[255];
 
-    time_t cur_time;
     cur_time = time(NULL);
 
+    fp1 = fopen("C:\\Users\\Benja\\OneDrive\\Desktop\\Mark\\ComputerProgramming1_projects\\01SALES_INVENTORY_v2\\sales-inventory\\files\\product_inventory.txt","r");
     fp2 = fopen("C:\\Users\\Benja\\OneDrive\\Desktop\\Mark\\ComputerProgramming1_projects\\01SALES_INVENTORY_v2\\sales-inventory\\files\\sales_inventory_report.txt","a");
     fprintf(fp2,"SALES\t\t\t QUANTITY\tSALES AMOUNT\t\tDATE: %s\n", ctime(&cur_time));
 
-    service_list(price);
+
+    file_print(fp1, "with num");
+    get_price(price);
     do
     {
         do{
@@ -200,16 +282,8 @@ int finals()
     }
     else
     {
-        char cur_line[255];
-        while(!feof(fp3))
-        {
-           fgets(cur_line,255,fp3);
-           printf("%s", cur_line);
-        }
+        file_print(fp3,"");
         printf("\n\nTotal Sales\t\t\t\t%.2f\n", cost_sum);
-        printf("\nABC COMPUTER SHOP DAILY SALES REPORT\n\n");
-        printf("Prepared by: CABALONA MARK REYES AND SOPHIA DALUMPINES\n\n");
-        printf("Date prepared: %s\n", ctime(&cur_time));
     }
 
     fclose(fp1);
@@ -219,41 +293,6 @@ int finals()
     return 0;// end of main program
 }
 
-void service_list(float array[])
-{
-    fp1 = fopen("C:\\Users\\Benja\\OneDrive\\Desktop\\Mark\\ComputerProgramming1_projects\\01SALES_INVENTORY_v2\\sales-inventory\\files\\product_inventory.txt","r");
-    char cur_line[255], *token;
-    int i = 0, j = 0;
-
-    printf("\t\t SERVICES\n\n");
-    if(!fp1)
-    {
-        printf("Error Opening product_inventory.txt");
-        exit(1);
-    }
-    else
-    {
-        while (!feof(fp1))
-        {
-            fgets(cur_line, 255, fp1);
-            if (j != 0)
-                printf("%d %s", j, cur_line);
-            j++;
-
-            token = strtok(cur_line, "\n\t ");//"this\nis/ta string"
-            while (token != NULL)
-            {
-                if (atof(token) != 0 )//atof("2.10") = 2.10
-                {
-                    array[i] = atof(token);
-                    i++;
-                }
-                token = strtok(NULL, "\n\t ");
-            }
-        }
-    }
-
-}
 
 string yes_no(string question)
 {

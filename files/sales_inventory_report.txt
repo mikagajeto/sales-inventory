@@ -68,3 +68,15 @@ Typing			 1		15.00
 Scanning		 2		20.00
 
 
+SALES			 QUANTITY	SALES AMOUNT		DATE: Thu Jan 07 21:06:37 2021
+
+Document Printing	 1		2.00
+
+
+SALES			 QUANTITY	SALES AMOUNT		DATE: Thu Jan 07 21:55:24 2021
+
+Document Printing	 1		2.00
+Image Printing		 2		20.00
+Document Printing	 12		24.00
+
+
