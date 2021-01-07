@@ -1,2 +1,4 @@
 # sales-inventory
 Computer Programming - Final Project
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut magna et nisl tempor cursus non sit amet ante. Nam non vehicula odio, ut varius purus. Ut rutrum, augue ac feugiat lobortis, mauris purus dapibus erat, a hendrerit libero leo vitae augue. Sed nec velit mi. In sit amet eros nisi. Morbi urna arcu, laoreet sed euismod non, rutrum nec lacus. Etiam hendrerit tincidunt tortor. Sed pretium erat ac justo tempor, quis sagittis odio posuere. Suspendisse sollicitudin facilisis est, eu lacinia velit posuere ac. Sed aliquet mi at venenatis consequat. Nunc rutrum, leo sed semper ornare, turpis magna blandit quam, et blandit urna felis id tortor. Aenean blandit velit vel mattis ornare.
