@@ -1,6 +1,6 @@
 Services               Prices
-Document Printing      2.00 per page
-Image Printing         10.00 per page
-Computer Rental        15.00 per hour
-Scanning               10.00 per page
-Typing                 15.00 per page
+Document-Printing      2.00
+Image-Printing         10.00
+Computer-Rental        15.00
+Scanning               10.00
+Typing                 15.00
