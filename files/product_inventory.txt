@@ -1,6 +1,6 @@
-Services               Prices
-Document-Printing      2.00
-Image-Printing         10.00
-Computer-Rental        15.00
-Scanning               10.00
-Typing                 15.00
+Services			Prices
+Document Printing		100.00
+Computer Rental			15.00
+Scanning			10.00
+Typing				15.00
+Bond Paper			1.50
